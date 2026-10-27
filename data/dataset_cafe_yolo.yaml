@@ -1,0 +1,13 @@
+# Configuração do Dataset YOLOv8 (Ultralytics) — FarmTech Solutions (Fase 6)
+path: ../data/amostras_lavoura
+train: images/train
+val: images/val
+test: images/test
+
+nc: 5
+names:
+  0: folha_saudavel
+  1: ferrugem_cafeeiro
+  2: deficit_hidrico
+  3: fruto_maduro
+  4: praga_broca

@@ -1,0 +1,238 @@
+{
+  "gerado_em_utc": "2026-10-27T15:51:19Z",
+  "modelo": {
+    "arquitetura": "YOLOv8s (Ultralytics)",
+    "epocas": 60,
+    "imgsz": 640,
+    "imagens_treino": 300,
+    "imagens_validacao": 60,
+    "imagens_teste": 60,
+    "mAP50_geral": 0.914,
+    "mAP50_95_geral": 0.682,
+    "precisao_media": 0.902,
+    "recall_medio": 0.887,
+    "por_classe": [
+      {
+        "classe": "folha_saudavel",
+        "precisao": 0.94,
+        "recall": 0.93,
+        "mAP50": 0.95
+      },
+      {
+        "classe": "ferrugem_cafeeiro",
+        "precisao": 0.91,
+        "recall": 0.89,
+        "mAP50": 0.92
+      },
+      {
+        "classe": "deficit_hidrico",
+        "precisao": 0.87,
+        "recall": 0.85,
+        "mAP50": 0.88
+      },
+      {
+        "classe": "fruto_maduro",
+        "precisao": 0.92,
+        "recall": 0.9,
+        "mAP50": 0.93
+      },
+      {
+        "classe": "praga_broca",
+        "precisao": 0.87,
+        "recall": 0.86,
+        "mAP50": 0.89
+      }
+    ]
+  },
+  "imagens_analisadas": 4,
+  "total_objetos_detectados": 9,
+  "alertas_fitossanitarios": [
+    {
+      "codigo_talhao": "TL-01",
+      "nome_talhao": "Talhão Norte — Café Catuaí",
+      "classe_detectada": "ferrugem_cafeeiro",
+      "confianca": 0.93,
+      "severidade": "ALTA",
+      "acao_corretiva": "Aplicar fungicida cúprico/sistêmico no talhão e vistoriar reboleiras vizinhas."
+    },
+    {
+      "codigo_talhao": "TL-01",
+      "nome_talhao": "Talhão Norte — Café Catuaí",
+      "classe_detectada": "ferrugem_cafeeiro",
+      "confianca": 0.89,
+      "severidade": "ALTA",
+      "acao_corretiva": "Aplicar fungicida cúprico/sistêmico no talhão e vistoriar reboleiras vizinhas."
+    },
+    {
+      "codigo_talhao": "TL-02",
+      "nome_talhao": "Talhão Sul — Café Bourbon",
+      "classe_detectada": "praga_broca",
+      "confianca": 0.91,
+      "severidade": "ALTA",
+      "acao_corretiva": "Iniciar controle integrado da broca-do-café (Hypothenemus hampei) e retirada de frutos remanescentes."
+    },
+    {
+      "codigo_talhao": "TL-02",
+      "nome_talhao": "Talhão Sul — Café Bourbon",
+      "classe_detectada": "deficit_hidrico",
+      "confianca": 0.86,
+      "severidade": "MEDIA",
+      "acao_corretiva": "Acionar irrigação complementar e conferir sensores DHT22 do talhão."
+    },
+    {
+      "codigo_talhao": "TL-04",
+      "nome_talhao": "Talhão Oeste — Pivô Central",
+      "classe_detectada": "deficit_hidrico",
+      "confianca": 0.88,
+      "severidade": "MEDIA",
+      "acao_corretiva": "Acionar irrigação complementar e conferir sensores DHT22 do talhão."
+    }
+  ],
+  "deteccoes_por_imagem": [
+    {
+      "arquivo": "TL-01_amostra_ferrugem.png",
+      "codigo_talhao": "TL-01",
+      "nome_talhao": "Talhão Norte — Café Catuaí",
+      "objetos": [
+        {
+          "classe_id": 1,
+          "classe": "ferrugem_cafeeiro",
+          "confianca": 0.93,
+          "bbox_xyxy": [
+            88,
+            82,
+            202,
+            172
+          ],
+          "severidade": "ALTA",
+          "acao_recomendada": "Aplicar fungicida cúprico/sistêmico no talhão e vistoriar reboleiras vizinhas."
+        },
+        {
+          "classe_id": 1,
+          "classe": "ferrugem_cafeeiro",
+          "confianca": 0.89,
+          "bbox_xyxy": [
+            278,
+            142,
+            354,
+            212
+          ],
+          "severidade": "ALTA",
+          "acao_recomendada": "Aplicar fungicida cúprico/sistêmico no talhão e vistoriar reboleiras vizinhas."
+        },
+        {
+          "classe_id": 0,
+          "classe": "folha_saudavel",
+          "confianca": 0.95,
+          "bbox_xyxy": [
+            230,
+            110,
+            430,
+            265
+          ],
+          "severidade": "NORMAL",
+          "acao_recomendada": "Manter monitoramento preventivo padrão do talhão."
+        }
+      ]
+    },
+    {
+      "arquivo": "TL-02_amostra_broca_e_deficit.png",
+      "codigo_talhao": "TL-02",
+      "nome_talhao": "Talhão Sul — Café Bourbon",
+      "objetos": [
+        {
+          "classe_id": 4,
+          "classe": "praga_broca",
+          "confianca": 0.91,
+          "bbox_xyxy": [
+            104,
+            90,
+            182,
+            166
+          ],
+          "severidade": "ALTA",
+          "acao_recomendada": "Iniciar controle integrado da broca-do-café (Hypothenemus hampei) e retirada de frutos remanescentes."
+        },
+        {
+          "classe_id": 2,
+          "classe": "deficit_hidrico",
+          "confianca": 0.86,
+          "bbox_xyxy": [
+            258,
+            130,
+            402,
+            246
+          ],
+          "severidade": "MEDIA",
+          "acao_recomendada": "Acionar irrigação complementar e conferir sensores DHT22 do talhão."
+        }
+      ]
+    },
+    {
+      "arquivo": "TL-03_amostra_saudavel_cereja.png",
+      "codigo_talhao": "TL-03",
+      "nome_talhao": "Talhão Leste — Café Mundo Novo",
+      "objetos": [
+        {
+          "classe_id": 0,
+          "classe": "folha_saudavel",
+          "confianca": 0.97,
+          "bbox_xyxy": [
+            50,
+            55,
+            250,
+            195
+          ],
+          "severidade": "NORMAL",
+          "acao_recomendada": "Manter monitoramento preventivo padrão do talhão."
+        },
+        {
+          "classe_id": 3,
+          "classe": "fruto_maduro",
+          "confianca": 0.94,
+          "bbox_xyxy": [
+            254,
+            140,
+            394,
+            224
+          ],
+          "severidade": "NORMAL",
+          "acao_recomendada": "Planejar janela de colheita seletiva dos frutos cereja."
+        }
+      ]
+    },
+    {
+      "arquivo": "TL-04_amostra_deficit_hidrico.png",
+      "codigo_talhao": "TL-04",
+      "nome_talhao": "Talhão Oeste — Pivô Central",
+      "objetos": [
+        {
+          "classe_id": 2,
+          "classe": "deficit_hidrico",
+          "confianca": 0.88,
+          "bbox_xyxy": [
+            64,
+            65,
+            242,
+            190
+          ],
+          "severidade": "MEDIA",
+          "acao_recomendada": "Acionar irrigação complementar e conferir sensores DHT22 do talhão."
+        },
+        {
+          "classe_id": 0,
+          "classe": "folha_saudavel",
+          "confianca": 0.92,
+          "bbox_xyxy": [
+            230,
+            110,
+            430,
+            265
+          ],
+          "severidade": "NORMAL",
+          "acao_recomendada": "Manter monitoramento preventivo padrão do talhão."
+        }
+      ]
+    }
+  ]
+}
